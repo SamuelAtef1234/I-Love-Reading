@@ -224,15 +224,18 @@ li{
 }
 /* End Home Page */
 /* Start About */
+.about{
+    margin: 0 0 250px 0;
+}
 .about .boxs{
     width: 90%;
     margin: 60px auto;
 }
 .about .boxs .box{
     position: relative;
-    display: inline-block;
-    width: calc(80% / 3);
-    margin: 17px 36px;
+    float: left;
+    width: calc(75% / 3);
+    margin: 16px 47px;
     border: 1px solid black;
     text-align: center;
     border-radius: 10px;
@@ -339,35 +342,24 @@ li{
 }
 /* End About */
 /* Start Portfolio */
+.portfolio{
+    padding: 0 0 500px 0;
+}
 .portfolio .boxs{
     width: 100%;
-    margin: 60px auto 0;
+    margin: 70px auto 0;
 }
 .portfolio .boxs .box{
     position: relative;
-    display: inline-block;
-    width: calc(70% / 3);
+    float: left;
+    max-width: calc(75% / 3);
     border: 1px solid black;
     border-radius: 10px;
     height: 190px;
-    margin-right: 40px;
+    margin: 30px 30px 40px 0;
 }
 .portfolio .boxs .box.box1{
     margin-left: 130px;
-}
-.portfolio .boxs .box.box1.boxx{
-    top: -39px;
-}
-.portfolio .boxs .box.box2{
-    position: relative;
-    top: -24px;
-}
-.portfolio .boxs .box.box3{
-    position: relative;
-    top: -38px;
-}
-.portfolio .boxs .box.booxx{
-    top: -12px;
 }
 .portfolio .boxs .box i{
     padding: 30px 7px;
@@ -448,7 +440,7 @@ li{
     background-color: rgba(0, 0, 0, 0.6);
 }
 .sub-services{
-    padding: 60px 0;
+    padding: 60px 0 120px;
     background-image: url(../imges/bac-services.jpg);
     background-repeat: no-repeat;
     background-size: cover;
@@ -469,8 +461,8 @@ li{
     padding: 80px 0;
 }
 .sub-services .container .box{
-    padding: 0 66px;
-    display: inline-block;
+    padding: 0 67.5px;
+    float: left;
     text-align: center;
     z-index: 10;
     color: white;
