@@ -26,9 +26,33 @@ li{
     user-select: none;
     padding: 60px 0;
 }
+/* Small */
+
+@media (min-width: 768px) {
+    .container{
+        width: 750px;
+    }
+}
+
+/* Mediam */
+
+@media (min-width: 992px) {
+    .container{
+        width: 970px;
+    }
+}
+
+/* Large */
+
+@media (min-width: 1200px) {
+    .container{
+        width: 1170px;
+    }
+}
+
 .main-title {
-    margin: 0 auto;
-    padding: 10px 20px;
+    margin: 0 auto 40px;
+    padding: 0 20px 10px;
     font-size: 25px;
     width: fit-content;
     position: relative;
@@ -66,18 +90,32 @@ li{
 }
 .nav-bar .container{
     padding: 4px 20px;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
 }
 .nav-bar .container i{
     font-size: 25px;
-    float: left;
     position: relative;
     top: 2px;
+    left: -40px;
     color: #fff;
+}
+@media (max-width: 767px) {
+    .nav-bar .container i{
+        position: absolute;
+        margin-left: 40px;
+        top: 6px;
+    }
 }
 .nav-bar .container .bar-search{
     position: relative;
-    float: left;
-    left: 20px;
+    left: -250px;
+}
+@media (max-width: 991px){
+    .nav-bar .container .bar-search{
+        display: none;
+    }
 }
 .nav-bar .container .bar-search input{
     padding: 10px 15px;
@@ -97,21 +135,22 @@ li{
     position: absolute;
     left: 190px;
     font-size: 14px;
-    top: 8px;
+    top: 10px;
     color: black;
-    top: 50%;
-    transform: translateY(60%);
 }
 .nav-bar .container .links{
-    float: right;
-    padding: 0 10px;
     position: relative;
-    left: -20px;
-    padding-top: 7px;
     height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@media(max-width: 767px){
+    .nav-bar .container .links{
+        padding: 5px;
+    }
 }
 .nav-bar .container .links li{
-    float: left;
     padding-left: 10px;
 }
 .nav-bar .container .links a{
@@ -120,6 +159,12 @@ li{
     padding-left: 13px;
     font-size: 15px;
     color: #fff;
+}
+@media (max-width: 767px) {
+    .nav-bar .container .links a{
+        font-size: 10px;
+        padding-left: 10px;
+    }
 }
 .nav-bar .container .links a::before{
     content: '';
@@ -151,6 +196,12 @@ li{
     left: 17px;
     background-color: #fff;
 }
+@media (max-width: 767px) {
+    .nav-bar .container .links .mega .mega-menu{
+        width: 120px;
+        height: 120px;
+    }
+}
 .nav-bar .container .links .mega .mega-menu::after{
     content: '';
     position: absolute;
@@ -181,6 +232,7 @@ li{
 .home .container .overlay{
     position: absolute;
     top: 0;
+    left: 0;
     background-color: rgba(0, 0, 0, 0.3);
     width: 100%;
     height: 100%;
@@ -225,17 +277,17 @@ li{
 /* End Home Page */
 /* Start About */
 .about{
-    margin: 0 0 250px 0;
+    padding: 40px 0;
 }
 .about .boxs{
-    width: 90%;
-    margin: 60px auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fill , minmax(300px , 1fr));
+    gap: 20px;
 }
 .about .boxs .box{
     position: relative;
-    float: left;
-    width: calc(75% / 3);
-    margin: 16px 47px;
+    margin: 0 auto;
+    width: 300px;
     border: 1px solid black;
     text-align: center;
     border-radius: 10px;
@@ -282,25 +334,24 @@ li{
     color: rgb(81, 81, 81);
     font-size: 18px;
 }
-.about-sub .container{
+.about-sub{
+    padding: 40px 0;
     background-color: rgb(235, 235, 235);
-    height: 800px;
 }
 .about-sub .container .images{
-    padding-top: 70px;
-    width: 80%;
+    padding-top: 40px;
     margin: 0 auto;
     padding-left: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill , minmax(300px , 1fr));
+    gap: 20px;
 }
 .about-sub .container .images .image{
-    display: inline-block;
     position: relative;
-    width: calc(90% / 3);
-    height: 200px;
-    margin: 0 10px;
+    height: 400px;
 }
 .about-sub .container .images .image img{
-    width: 100%;
+    width: 96%;
     height: 100%;
     position: absolute;
 }
@@ -343,23 +394,21 @@ li{
 /* End About */
 /* Start Portfolio */
 .portfolio{
-    padding: 0 0 500px 0;
+    padding: 40px 0;
 }
 .portfolio .boxs{
     width: 100%;
     margin: 70px auto 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fill , minmax(300px , 1fr));
+    gap: 20px;
 }
 .portfolio .boxs .box{
     position: relative;
-    float: left;
-    max-width: calc(75% / 3);
     border: 1px solid black;
     border-radius: 10px;
     height: 190px;
-    margin: 30px 30px 40px 0;
-}
-.portfolio .boxs .box.box1{
-    margin-left: 130px;
+    margin: 20px;
 }
 .portfolio .boxs .box i{
     padding: 30px 7px;
@@ -383,13 +432,17 @@ li{
 /* Start Portfolio */
 /* Start Services */
 .services{
-    padding: 100px 0;
+    padding: 40px 0;
     background-color: rgb(235, 235, 235);
     position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 50px;
 }
 .services .content{
     padding: 20px 90px;
-    display: inline-block;
+    flex-basis: 50%;
 }
 .services .content h2{
     font-size: 40px;
@@ -416,12 +469,26 @@ li{
     padding-bottom: 25px;
 }
 .services .image{
-    display: inline-block;
-    position: absolute;
-    right: 100px;
+    flex-basis: 50%;
+    position: relative;
+}
+@media (max-width: 767px) {
+    .services{
+        flex-direction: column;
+    }
+    .services .image{
+        flex-basis: 100%;
+    }
+    .services .content{
+        flex-basis: 100%;
+    }
 }
 .services .image img{
     max-width: 300px;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%);
 }
 .services .image .switch{
     margin-top: 10px;
@@ -440,7 +507,7 @@ li{
     background-color: rgba(0, 0, 0, 0.6);
 }
 .sub-services{
-    padding: 60px 0 120px;
+    padding: 60px 0;
     background-image: url(../imges/bac-services.jpg);
     background-repeat: no-repeat;
     background-size: cover;
@@ -457,9 +524,12 @@ li{
 }
 .sub-services .container{
     margin: 0 auto;
-    width: 80%;
+    display: grid;
+    grid-template-columns: repeat(auto-fill , minmax(250px , 1fr));
     padding: 80px 0;
+    gap: 40px;
 }
+
 .sub-services .container .box{
     padding: 0 67.5px;
     float: left;
@@ -480,16 +550,16 @@ li{
     padding: 20px 0 0;
 }
 .prices .boxs{
-    width: 90%;
     margin: 60px auto 0;
     padding: 20px 30px 100px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill , minmax(300px , 1fr));
+    gap: 40px;
 }
 .prices .boxs .box{
-    width: 280px;
-    margin-right: 40px;
-    display: inline-block;
+    width: calc((100% / 3) -100px);
     border: 1px solid black;
-    height: 350px;
+    height: 380px;
     text-align: center;
     padding: 30px 0 0;
     border-radius: 15px;
@@ -511,9 +581,6 @@ li{
 .prices .boxs .box:hover::before{
     height: 100%;
     opacity: 0.8;
-}
-.prices .boxs .box.box1{
-    margin-left: 70px;
 }
 .prices .boxs .box p{
     font-weight: 600;
@@ -538,12 +605,14 @@ li{
     font-size: 35px;
 }
 .prices .boxs .box button{
+    margin-top: 30px;
     padding: 5px 25px;
     border-radius: 10px;
     border: 1px solid black;
-    outline: 0;
     background-color: #cccccca5;
-    cursor: pointer;
+}
+.prices .boxs .box button:focus{
+    outline: none;
 }
 /* End Prices */
 /* Start up-team */
@@ -564,15 +633,22 @@ li{
     z-index: 0;
 }
 .up-team .container{
-    width: 80%;
-    margin: auto;
+    margin: 0 auto;
     padding: 100px 0 100px 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .up-team .container .box{
-    display: inline-block;
-    width: 45%;
+    flex-basis: 45%;
     margin-right: 30px;
     z-index: 100;
+}
+@media (max-width: 767px) {
+    .up-team .container .box{
+        flex-wrap: wrap;
+        flex-basis: 100%;
+    }
 }
 .up-team .container .box .info{
     width: 100%;
@@ -611,12 +687,12 @@ li{
 }
 .team .container .boxs{
     padding: 50px 0 50px 60px;
-    width: 90%;
-    margin: auto;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fill , minmax(300px , 1fr));
+    gap: 40px;
 }
 .team .container .boxs .box{
-    width: calc(85% / 3);
-    display: inline-block;
     text-align: center;
     background-color: rgba(255, 255, 255, 0.456);
     border-radius: 10px;
@@ -703,17 +779,16 @@ li{
 /* End Team */
 /* Start Blog */
 .blog{
-    margin: -96px 0 0 0;
+    padding: 40px 0;
 }
 .blog .container .boxs{
-    padding: 50px 0 20px 75px;
-    width: 90%;
-    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fill , minmax(300px , 1fr));
+    gap: 40px;
 }
 .blog .container .boxs .box{
     width: 300px;
-    margin-right: 40px;
-    display: inline-block;
+    margin: 0 auto;
     border: 1px solid black;
     height: 450px;
     text-align: center;
@@ -721,10 +796,6 @@ li{
     border-radius: 15px;
     outline: 0;
     position: relative;
-}
-.blog .container .boxs .box.box3{
-    position: relative;
-    top: -13px;
 }
 .blog .container .boxs .box .image{
     position: absolute;
